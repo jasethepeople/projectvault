@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --vault-bg: #0f172a;
+    --vault-surface: #1e293b;
+    --vault-border: #334155;
+    --vault-text: #f1f5f9;
+    --vault-muted: #94a3b8;
+  }
+
+  body {
+    @apply bg-vault-950 text-vault-100 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .vault-card {
+    @apply bg-vault-900/50 border border-vault-700/50 rounded-xl backdrop-blur-sm;
+  }
+
+  .vault-btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    @apply hover:scale-105 active:scale-95;
+  }
+
+  .vault-btn-primary {
+    @apply vault-btn bg-vault-500 text-white hover:bg-vault-400;
+    @apply shadow-lg shadow-vault-500/25;
+  }
+
+  .vault-btn-secondary {
+    @apply vault-btn bg-vault-800 text-vault-200 hover:bg-vault-700;
+    @apply border border-vault-700;
+  }
+
+  .platform-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
